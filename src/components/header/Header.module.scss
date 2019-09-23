@@ -1,0 +1,11 @@
+.header {
+    .imgWrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        img {
+            max-width: 200px;
+        }
+    }
+}

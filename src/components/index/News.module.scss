@@ -1,0 +1,16 @@
+.article {
+    width: 30%;
+    margin-bottom: 20px;
+    &.main {
+        width: 100%;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
