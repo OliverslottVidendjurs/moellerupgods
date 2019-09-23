@@ -3,7 +3,7 @@ import styles from "./Activities.module.scss";
 import Activity from "./Activity";
 
 function Activities() {
-    const [activities, setActivities] = useState([{
+    const [activities] = useState([{
         id: 1,
         title: "Møllerup Hamp",
         content: "På Møllerup dyrker vi industri-hamp til fødevarer, isolering og hudpleje."

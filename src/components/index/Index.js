@@ -1,14 +1,18 @@
 import React from "react";
 import Intro from "./Intro";
-import NewsContainer from "./NewsContainer";
+import Articles from "./NewsContainer";
 import Activities from "./Activities";
+import styles from "./Index.module.scss";
+import Outro from "./Outro";
 
 function Index() {
     return (
-        <div>
+        <div className={styles.index}>
             <Intro />
-            <NewsContainer />
+            <Articles />
+            <div className={styles.divider}></div>
             <Activities />
+            <Outro />
         </div>
     );
 }

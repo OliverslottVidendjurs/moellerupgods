@@ -1,0 +1,35 @@
+.slider {
+    position: relative;
+    ul {
+        position: relative;
+        overflow: hidden;
+        li {
+            width: 100%;
+            left: 0;
+        }
+    }
+    .right,
+    .left {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        font-size: 50px;
+        transform: translateY(50)
+    }
+    .left {
+        left: 0;
+        transform: translate(-120%, -50%);
+    }
+    .right {
+        right: 0;
+        transform: translate(120%, -50%);
+    }
+    .indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        i:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

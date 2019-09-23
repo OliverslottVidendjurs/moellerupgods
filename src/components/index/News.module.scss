@@ -13,4 +13,11 @@
     p {
         margin-bottom: 10px;
     }
+    @media only screen and (max-width: 620px){
+        width: 45%;
+    }
+
+    @media only screen and (max-width: 400px){
+        width: 100%;
+    }
 }

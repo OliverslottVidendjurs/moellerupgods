@@ -1,0 +1,17 @@
+.footer {
+    background-color: #e4e4e4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &>div {
+            @media only screen and (max-width: 400px){
+                width: 100%;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

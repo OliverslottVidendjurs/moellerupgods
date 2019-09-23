@@ -1,0 +1,13 @@
+.instagram {
+    background: white;
+    width: 70%;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    box-shadow: none;
+    display: block;
+    margin: 0px 0px 12px;
+    padding: 0px;
+    @media only screen and (max-width: 500px){
+        width: 100%;
+    }
+}
