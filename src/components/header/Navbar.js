@@ -5,35 +5,57 @@ import "@fortawesome/fontawesome-free/css/all.css";
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
+    const [links] = useState([{
+        to: "/",
+        exact: true,
+        text: "Velkommen"
+    },
+    {
+        to: "/verdensballetten",
+        exact: false,
+        text: "Verdensballetten"
+    },
+    {
+        to: "/news",
+        exact: false,
+        text: "Nyheder"
+    },
+    {
+        to: "/events",
+        exact: false,
+        text: "Events og mødefaciliteter"
+    },
+    {
+        to: "/gaester",
+        exact: false,
+        text: "Hvad siger vores gæster"
+    },
+    {
+        to: "/about",
+        exact: false,
+        text: "Om Møllerup Gods"
+    },
+    {
+        to: "/contact",
+        exact: false,
+        text: "Kontakt os"
+    },
+    {
+        to: "/webshop",
+        exact: false,
+        text: "Webshop"
+    }]);
+
+    const liList = links.map(link => 
+        <li>
+            <NavLink onClick={() => setShowMenu(false)} activeClassName={styles.active} exact={link.exact} to={link.to}>{link.text}</NavLink>
+        </li>    
+    )
 
     return (
         <nav className={styles.navbar}>
             <ul className={(showMenu ? styles.show : "")}>
-                <li>
-                    {/* https://github.com/reactjs/react-router-tutorial/issues/316#issuecomment-479320692 */}
-                    <NavLink activeClassName={styles.active} exact to="/">Velkommen</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/verdensballetten">Verdensballetten</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/news">Nyheder</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/events">Events og mødefaciliteter</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/gaester">Hvad siger vores gæster</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/about">Om Møllerup Gods</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/contact">Kontakt os</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={styles.active} to="/webshop">Webshop</NavLink>
-                </li>
+                {liList}
             </ul>
             <i onClick={() => showMenu ? setShowMenu(false) : setShowMenu(true)} className={"fas fa-bars " + styles.burger}></i>
         </nav>
