@@ -65,9 +65,10 @@ function Slider() {
     }, [currentSlide]);
 
     useEffect(() => {
-        window.addEventListener("resize", function () {
-            initSlider();
-        });
+        window.addEventListener("resize", initSlider);
+        return () => {
+            window.removeEventListener("resize", initSlider);
+        }
     }, []);
 
     useEffect(() => {

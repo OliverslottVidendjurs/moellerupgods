@@ -1,8 +1,12 @@
 import React from "react";
+import Newsletter from "../index/Newsletter";
 
-function Contact(){
+function Contact() {
     return (
-        <h1>Contact</h1>
+        <div>
+            <h1>Contact</h1>
+            <Newsletter />
+        </div>
     )
 }
 
