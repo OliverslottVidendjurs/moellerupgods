@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 function Navbar() {
+    const [showMenu, setShowMenu] = useState(false);
+
     return (
         <nav className={styles.navbar}>
-            <ul>
+            <ul className={(showMenu ? styles.show : "")}>
                 <li>
                     {/* https://github.com/reactjs/react-router-tutorial/issues/316#issuecomment-479320692 */}
                     <NavLink activeClassName={styles.active} exact to="/">Velkommen</NavLink>
@@ -32,6 +35,7 @@ function Navbar() {
                     <NavLink activeClassName={styles.active} to="/webshop">Webshop</NavLink>
                 </li>
             </ul>
+            <i onClick={() => showMenu ? setShowMenu(false) : setShowMenu(true)} className={"fas fa-bars " + styles.burger}></i>
         </nav>
     );
 }
