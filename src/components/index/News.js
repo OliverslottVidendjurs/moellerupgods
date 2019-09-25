@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./News.module.scss";
+import {Link} from "react-router-dom";
 
 function Article(props){
     return (
-        <li className={styles.article + (props.article.id === 1 ? (" " + styles.main) : "")} key={props.article.id}>
-            <img src={("Artikel/" + props.article.id + ".png")} alt="img"/>
+        <li className={styles.article} key={props.article.id}>
+            <img src={("/Artikel/" + props.article.id + ".png")} alt="img"/>
             <h2>{props.article.title}</h2>
             <p>{props.article.content}</p>
-            <a href="https://www.moellerupgods.dk">Læs mere her</a>
+            <Link to={`/news/${props.article.id}`}>Læs mere her</Link>
         </li>
     );
 }

@@ -1,8 +1,9 @@
 import React from "react";
+import Activities from "../index/Activities";
 
 function Events(){
     return (
-        <h1>Events</h1>
+        <Activities/>
     )
 }
 

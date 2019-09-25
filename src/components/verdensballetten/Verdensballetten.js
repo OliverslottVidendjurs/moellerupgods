@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ArticleContext } from "../../context/ArticleContext";
+import Article from "../index/News";
 
-function Verdensballetten(){
+function Verdensballetten() {
+    const verdenBalletArticle = useContext(ArticleContext)[0];
     return (
-        <h1>verdensballetten</h1>
+        <div>
+            <h1>verdensballetten</h1>
+            <ul>
+                <Article article={verdenBalletArticle} />
+            </ul>
+        </div>
     )
 }
 

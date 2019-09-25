@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from './components/footer/Footer';
 
 //Navigation Pages
 import Index from "./components/index/Index";
 import Verdensballetten from "./components/verdensballetten/Verdensballetten";
-import News from "./components/news/News";
+import News2 from "./components/news/News";
 import Events from "./components/events/Events";
 import Gaester from "./components/gaester/Gaester";
 import About from "./components/about/About";
@@ -25,14 +25,17 @@ function App() {
             <Header />
             <ArticleContextProvider>
               <ActivityContextProvider>
-                <Route exact path="/" component={Index} />
-                <Route path="/verdensballetten" component={Verdensballetten} />
-                <Route path="/news" component={News} />
-                <Route path="/events" component={Events} />
-                <Route path="/gaester" component={Gaester} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/webshop" component={Webshop} />
+                <Switch>
+                  <Route exact path="/" component={Index} />
+                  <Route path="/verdensballetten" component={Verdensballetten} />
+                  <Route exact path="/news" component={News2} />
+                  <Route path="/news/:id" component={News2} />
+                  <Route path="/events" component={Events} />
+                  <Route path="/gaester" component={Gaester} />
+                  <Route path="/about" component={About} />
+                  <Route path="/contact" component={Contact} />
+                  <Route path="/webshop" component={Webshop} />
+                </Switch>
               </ActivityContextProvider>
             </ArticleContextProvider>
           </BrowserRouter>
