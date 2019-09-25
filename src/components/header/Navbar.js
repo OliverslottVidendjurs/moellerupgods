@@ -46,10 +46,10 @@ function Navbar() {
         text: "Webshop"
     }]);
 
-    const liList = links.map(link => 
-        <li>
+    const liList = links.map(link =>
+        <li key={Math.random()} >
             <NavLink onClick={() => setShowMenu(false)} activeClassName={styles.active} exact={link.exact} to={link.to}>{link.text}</NavLink>
-        </li>    
+        </li>
     )
 
     return (

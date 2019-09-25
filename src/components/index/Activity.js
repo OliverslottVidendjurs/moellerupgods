@@ -7,7 +7,7 @@ function Activity(props) {
             <img src={require("../../assets/Nyheder/" + props.activity.id + ".jpg")} alt="img" />
             <h2>{props.activity.title}</h2>
             <p>{props.activity.content}</p>
-            <a href="#">Læs mere her</a>
+            <a href="https://www.moellerupgods.dk">Læs mere her</a>
         </li>
     );
 }

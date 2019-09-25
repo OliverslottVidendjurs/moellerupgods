@@ -64,7 +64,7 @@ function Activities() {
         content: "Verdensballet - charmerende udendørsforestilling, 13. juli 2018 på Møllerup. "
     }
     ]);
-    let activityList = activities.map(activity => 
+    const activityList = activities.map(activity => 
         <Activity key={activity.id} activity={activity}/> 
     );
     return (

@@ -24,7 +24,7 @@ function Articles() {
         content: "Marsk Stig Andersen Hvide af den magtfulde Hvide-slægt er den tidligst kendte ejer af Møllerup. Møllerup var hans vigtigste besiddelse. Gården lå, som i dag, med en borg på øen og avlsbygninger på den anden side af voldgraven."
     }
     ]);
-    let articleList = articles.map(article =>
+    const articleList = articles.map(article =>
         <Article key={article.id} article={article} />
     );
     return (

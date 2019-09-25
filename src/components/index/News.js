@@ -7,7 +7,7 @@ function Article(props){
             <img src={require("../../assets/Artikel/" + props.article.id + ".png")} alt="img"/>
             <h2>{props.article.title}</h2>
             <p>{props.article.content}</p>
-            <a href="#">Læs mere her</a>
+            <a href="https://www.moellerupgods.dk">Læs mere her</a>
         </li>
     );
 }
