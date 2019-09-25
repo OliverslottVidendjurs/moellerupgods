@@ -1,14 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { ArticleContext } from "../../context/ArticleContext";
-import Article from "../index/News";
+import Article from "../index/Article";
 
-function News2(props) {
+function ArticlePage(props) {
     const articles = useContext(ArticleContext);
     let id = +props.match.params.id;
-
-    useEffect(() => {
-        console.log(articles[id]);
-    });
 
     return (
         <div>
@@ -19,4 +15,4 @@ function News2(props) {
     );
 }
 
-export default News2;
+export default ArticlePage;

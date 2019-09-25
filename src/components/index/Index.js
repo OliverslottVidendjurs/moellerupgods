@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro";
-import Articles from "./NewsContainer";
+import Articles from "./Articles";
 import Activities from "./Activities";
 import styles from "./Index.module.scss";
 import Outro from "./Outro";

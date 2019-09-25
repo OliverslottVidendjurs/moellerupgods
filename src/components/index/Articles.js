@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./NewsContainer.module.scss";
-import Article from "./News";
+import Article from "./Article";
 import { ArticleContext } from "../../context/ArticleContext";
 
 function Articles() {
