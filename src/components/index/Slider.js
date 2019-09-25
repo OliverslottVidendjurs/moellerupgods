@@ -1,26 +1,20 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Slider.module.scss";
-import Slider1Path from "../../assets/slider/slider1.png";
-import Slider2Path from "../../assets/slider/slider2.png";
-import Slider3Path from "../../assets/slider/slider3.png";
-import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css"
+import "@fortawesome/fontawesome-free/css/all.css"
 
 //Welcome to my domain >:D
 
 function Slider() {
     const [slide, setSlide] = useState([{
         id: 1,
-        path: Slider1Path,
         loaded: false
     },
     {
         id: 2,
-        path: Slider2Path,
         loaded: false
     },
     {
         id: 3,
-        path: Slider3Path,
         loaded: false
     }]);
 
@@ -115,7 +109,7 @@ function Slider() {
 
     let slideList = slide.map((slide, i) =>
         <li style={liStyle[i]} ref={ref => liEl.current[i] = ref} key={slide.id}>
-            <img onLoad={() => handleImgLoad(i)} ref={imgEl} src={slide.path} alt="img" />
+            <img onLoad={() => handleImgLoad(i)} ref={imgEl} src={("slider/slider"+(i+1)+".png")} alt="img" />
         </li>
     );
 

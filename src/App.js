@@ -13,6 +13,8 @@ import Gaester from "./components/gaester/Gaester";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Webshop from "./components/webshop/Webshop";
+import ActivityContextProvider from './context/ActivityContext';
+import ArticleContextProvider from './context/ArticleContext';
 
 function App() {
   return (
@@ -21,14 +23,18 @@ function App() {
         <div className="margin">
           <BrowserRouter>
             <Header />
-            <Route exact path="/" component={Index} />
-            <Route path="/verdensballetten" component={Verdensballetten} />
-            <Route path="/news" component={News} />
-            <Route path="/events" component={Events} />
-            <Route path="/gaester" component={Gaester} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/webshop" component={Webshop} />
+            <ArticleContextProvider>
+              <ActivityContextProvider>
+                <Route exact path="/" component={Index} />
+                <Route path="/verdensballetten" component={Verdensballetten} />
+                <Route path="/news" component={News} />
+                <Route path="/events" component={Events} />
+                <Route path="/gaester" component={Gaester} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/webshop" component={Webshop} />
+              </ActivityContextProvider>
+            </ArticleContextProvider>
           </BrowserRouter>
         </div>
       </div>
